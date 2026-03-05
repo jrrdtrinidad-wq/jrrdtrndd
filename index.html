@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goldilocks Philippines</title>
+<link rel="icon" type="image/jpeg" href="goldilocks.jpg">
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#fff4e6;
+color:#333;
+scroll-behavior:smooth;
+}
+
+#loginPage{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f7c59f;
+}
+
+form{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+width:350px;
+text-align:center;
+}
+
+form h2{
+color:#d35400;
+margin-bottom:20px;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+}
+
+button{
+width:100%;
+padding:10px;
+margin-top:10px;
+background:#ff8c42;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+font-size:14px;
+}
+
+button:hover{
+background:#e07b30;
+}
+
+#site{
+display:none;
+}
+
+nav{
+background:#ff8c42;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+header img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+h1,h2{
+color:#d35400;
+text-align:center;
+}
+
+section{
+margin:40px auto;
+max-width:900px;
+background:#fff8f0;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#ffb87c;
+color:white;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="loginPage">
+
+<form onsubmit="enterSite(event)">
+<h2>Welcome to Goldilocks Philippines</h2>
+
+<input type="text" placeholder="Enter your full name" required>
+<input type="text" placeholder="Enter your address" required>
+<input type="email" placeholder="Enter your Gmail" required>
+
+<select required>
+<option disabled selected>Select your gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Prefer not to say</option>
+</select>
+
+<button type="submit">Enter Site</button>
+</form>
+
+</div>
+
+<div id="site">
+
+<nav>
+<a href="#about">About</a>
+<a href="#story">Story</a>
+<a href="#offers">Offers</a>
+<a href="#gallery">Gallery</a>
+<a href="#reach">Reach</a>
+<a href="#mission">Mission</a>
+<a href="#" onclick="logout()">Back to Login</a>
+</nav>
+
+<header>
+<img src="banner.jpg" alt="Goldilocks Bakery Banner"
+onerror="this.onerror=null;this.src='placeholder.jpg';">
+</header>
+
+<section id="about">
+<h1>About Goldilocks Philippines</h1>
+<p>Goldilocks and Goldilocks SM City Tuguegarao are part of Goldilocks Bakeshop, Inc. — the leading Filipino bakery and food service company that has become a staple in Filipino celebrations and everyday life.</p>
+</section>
+
+<section id="story">
+<h2>Our Story & Heritage</h2>
+<p>Goldilocks began with a simple dream in 1966 when two sisters Milagros Leelin Yee and Clarita Leelin Go and their sister-in-law Doris Wilson Leelin opened a modest bakeshop in Makati.</p>
+<p>Since then, the brand has grown into the largest Filipino-owned bakeshop chain in the world.</p>
+</section>
+
+<section id="offers">
+<h2>What We Offer</h2>
+<ul>
+<li>Celebration cakes and themed cakes</li>
+<li>Ensaymada, polvoron, mamon</li>
+<li>Fresh breads and pastries</li>
+<li>Savory meals and party trays</li>
+<li>Filipino favorites for lunch and dinner</li>
+</ul>
+</section>
+
+<section id="gallery">
+<h2>Our Best Sellers</h2>
+
+<div class="gallery">
+
+<img src="cake.jpg" alt="Goldilocks Celebration Cake"
+onerror="this.onerror=null;this.src='placeholder.jpg';">
+
+<img src="ensaymada.jpg" alt="Goldilocks Ensaymada Bread"
+onerror="this.onerror=null;this.src='placeholder.jpg';">
+
+<img src="polvoron.jpg" alt="Goldilocks Polvoron Dessert"
+onerror="this.onerror=null;this.src='placeholder.jpg';">
+
+<img src="mamon.jpg" alt="Goldilocks Mamon Sponge Cake"
+onerror="this.onerror=null;this.src='placeholder.jpg';">
+
+<img src="bread.jpg" alt="Fresh Bread from Goldilocks"
+onerror="this.onerror=null;this.src='placeholder.jpg';">
+
+<img src="partytray.jpg" alt="Goldilocks Party Tray Meals"
+onerror="this.onerror=null;this.src='placeholder.jpg';">
+
+</div>
+
+</section>
+
+<section id="reach">
+<h2>Footprint & Reach</h2>
+<p>Goldilocks has more than 900 stores nationwide and international branches in:</p>
+
+<ul>
+<li>United States</li>
+<li>Canada</li>
+<li>Thailand</li>
+</ul>
+
+</section>
+
+<section id="mission">
+<h2>Our Mission</h2>
+<p><strong>To make every day a celebration.</strong></p>
+</section>
+
+<footer>
+© 2026 Goldilocks Bakeshop Inc.
+</footer>
+
+</div>
+
+
+<script>
+
+function enterSite(event){
+event.preventDefault()
+
+document.getElementById("loginPage").style.display="none"
+document.getElementById("site").style.display="block"
+}
+
+function logout(){
+document.getElementById("site").style.display="none"
+document.getElementById("loginPage").style.display="flex"
+window.scrollTo(0,0)
+}
+
+</script>
+
+</body>
+  </html>
